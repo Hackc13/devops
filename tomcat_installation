@@ -1,0 +1,64 @@
+Tomcat 
+ jdk install 3 Rd path 
+Tomcat download --1 St link
+2 nd path copy 
+cd /opt
+wget paste 2 nd link
+ll
+tar -xzvf paste tar....
+ll
+mv Apache....
+ll
+cd Tomcat
+ll
+Cd bin/
+ll
+./startup.sh
+ip addres/8080--- manage  app
+Http error --- context.xml 
+find / - name context.xml
+vi last nunchi 2 nd path 
+<!-- --> both 2 paths
+cd conf 
+ll
+vi tomcat users.xml 
+Remove comments copy and paste 4 times 
+admin ----admin.    (4) 
+deployer---deployer.      gui
+Name---name.     script.    
+cd ..
+cd bin
+./shutdown.sh
+Start
+ browse  sigin with admin admin
+Eclipse 
+Pomfile 
+ Browse ---Maven servlet dependency --2.3
+Copy the code
+Push and commit to GitHub 
+Open Jenkins 
+Manage
+Plugins 
+Search deploye  to container --install
+Modify credentials 
+Scope -- global
+Admin
+Admin
+I'd -- tomcat_deploy
+Dashboard -- new item --- maven project 
+Source code manag---- git
+Clean install
+Under post build ...deploy var/ear
+Add --- **/*.war
+Choose tomcat 9.x remote 
+Bulid and success
+Gitbash 
+Git clone link 
+cd Cb ds band
+cd src
+cd main 
+cd web app 
+cd index.jsp
+
+
+

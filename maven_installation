@@ -1,0 +1,42 @@
+Maven
+
+
+Root 
+service jenkins start
+cd /opt
+maven download ---first link ---1st link
+wget link
+ll
+tar -xzvf Apache.......
+ll
+mv 1st Apache ..  maven
+cd maven/
+ll
+cd bin/
+./mvn -v
+cd ~
+ll -a
+find / -name java-17*
+vi .bash_profile
+M2_HOME=/opt/maven
+M2=/opt/maven/bin
+JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto.x86_64
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+export PATH 
+esc:wq
+Ip addres:8080---jenkins login
+Manage Jenkins -- plugins -- available Jenkins -- search maven install
+Manage tools -- tools---add jdk  --- name =java-17---java home= path 
+Check box off install automatically 
+Add maven -- name =maven-3.9.5
+Maven Home=/opt/maven
+Apply and save
+New item-- file name 
+maven project --- git 
+Repository --- GitHub url
+Repository browser -- githubweb
+URL same url remove .git
+Save and apply
+Build now 
+Eclipse  push .....
+Jenkins Build now

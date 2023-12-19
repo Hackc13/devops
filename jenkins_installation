@@ -1,0 +1,16 @@
+Jenkins installation 
+Sudo su -
+PWD
+yum install git -y
+Jenkins download --- red hat --- 2 links 
+jdk17 installation ---3 Rd link
+yum install Jenkins
+service Jenkins start
+Security change inbound rules
+Ip adrees.8080
+Copy the path ---- cat path,,, pasword 
+After Jenkins  admin -- reg no pass
+Manage Jenkins --- available plugins and  search github integration 
+New item --- filename
+Build steps --- execute shell---echo"hello"
+Save and apply build now -- console output

@@ -1,0 +1,51 @@
+yum install docker
+useradd dockeradmin
+passwd dockeradmin
+usermod -aG docker dockeradmin
+cd /opt
+mkdir docker
+chown -R dockeradmin:dockeradmin /opt/docker
+
+vi /etc/ssh/sshd_config --->password authentication yes
+service sshd relaod
+
+# Integrate Jenkins with Docker
+# Install the Publish Over SSH plugin
+# Manage Jenkins --> System --> Publish Over SSH --> SSH Servers --> Add
+# Name: dockerhost
+# Host: Public IP of Docker
+# Username: dockeradmin
+# Advanced --> Enable checkbox and provide the password
+# Test configuration
+
+cd docker
+vi Dockerfile
+FROM tomcat
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps/
+COPY ./*.war /usr/local/tomcat/webapps/
+
+docker build -t custimag1 .
+docker images --->check images
+docker run -d --name cust-cont -p 8081:8080 custimg1
+
+# Create a repository --> Add Java as gitignore files
+# In Eclipse, create a Maven webapp 1.0
+# There may be an error, so search for "maven servlet dependency" on Google
+# Select version 2.3 and copy the code into the pom.xml file
+# Push to GitHub repo
+
+# Jenkins --> New item create
+# Configure -->
+# postbuild action --> send build artifacts over SSH
+# SSH server
+# Target: target/*.war
+# Remove Prefix: target
+# Remote Directory: //opt//docker
+# Execute code
+# cd /opt/docker
+# docker build -t custimg1 .
+# docker stop cust-cont
+# docker rm cust-cont
+# docker run -d --name cust-cont -p 8082:8080 custimg1
+# Apply and save
+
