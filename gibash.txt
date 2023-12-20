@@ -1,0 +1,141 @@
+in gitbash
+
+git config --global user.name "pardhav"
+//git config --global user.name
+git config --global user.email "pardhav@gmail.com"
+//git config --global user.email
+mkdir gitdemo
+cd gitdemo
+git init .
+cat > file1
+welcome to gitbash
+//cat file1
+git status
+git add file1
+git status
+git log
+git commit -m "file1 was created from gitbash"
+git log
+git status
+vi file1
+developer1 from gitbash
+:x
+//cat file1
+git status
+git add file1
+git status
+git log
+git commit -m "2nd commit from github dev1"
+git log
+//to commit directly from working area to local repository use 'git commit -a'
+//vi file1
+// 3rd line for directly commit
+//:x
+//git commit -a -m " direct commit(3) from dev1"
+
+
+
+
+//difference between working dir and staging area use 'git diff'
+vi file1
+//remove and a line
+:x
+git diff
+git add file1
+//difference between staging area and local rep use 'git diff --staged'
+git diff --staged
+//difference between working dir and local rep use 'git diff HEAD'
+git diff HEAD
+git commit -m "4th commit after differences"
+
+
+
+
+//to reset the file from local rep to working dir use 'git reset <log id>'
+git status
+git log
+git reset 3becc2
+git status
+git log
+// to reset the file from staged area to working dir use 'git reset <file name>'
+git add .
+git status
+git reset file1
+git status
+//don't do git log
+
+cd .git
+cat config
+cd ..
+git remote add origin https://github.com/pardhav4/gitbash.git
+cd .git
+cd config
+cd ..
+git push origin master https://github.com/pardhav4/gitbash.git //it will generates an error
+git push origin master
+
+
+
+git show 3abc
+git show HEAD
+git show HEAD~1
+git annotate file1
+
+
+
+git branch
+git branch test
+git log
+git checkout 198bc
+git log
+git switch -
+git log
+git checkout test
+git branch
+cat > file2
+this is file2 from gitbash
+developer1
+^c 
+git add file2
+git commit -m "file2 1st commit"
+git log
+git checkout main
+git branch
+git log
+git push origin main
+git log
+git push origin test
+git log
+git checkout test
+git log
+git merge test
+
+
+
+
+//fork - get repo from other systems to central repo
+//pull request - send a request from central repo to other system
+//it will observed in other system's contribute section
+
+
+mobaxterm
+sudo su -
+yum install git
+git --version
+git config --global user.name "pardhav"
+//git config --global user.name
+git config --global user.email "pardhav@gmail.com"
+//git config --global user.email
+git clone https://github.com/pardhav4/gitbash.git
+//ls
+cd gitbash
+//ls
+
+
+
+//git branch -m main
+//apply operations
+
+//git push -u origin main
+
+git pull
